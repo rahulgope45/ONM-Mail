@@ -69,3 +69,15 @@ export const signup = async (req:Request,res:Response) =>{
 
 
 }
+
+export const login = async (req:Request,res:Response)=>{
+
+}
+
+export const updateUser = async (req:Request,res:Response)=>{
+
+}
+
+export const deleteUser = async (req:Request,res:Response)=>{
+
+}
