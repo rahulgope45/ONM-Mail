@@ -5,12 +5,12 @@ interface JWTPAYLOAD{
     id:number
 }
 
-export const genreateToken = async (req:Request,res:Response)=>{
+export const genreateToken = async (id:number,res:Response)=>{
     if(!process.env.JWT_SECRET){
             throw new Error("JWT_SECRET is not defined")
         };
 
-        const{id} = req.body as {id:number}
+      //   const{id} = req.body as {id}
         const payload : JWTPAYLOAD = {id}
      const token = jwt.sign(payload, process.env.JWT_SECRET,{
         expiresIn: "7d"
